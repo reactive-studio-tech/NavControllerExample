@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="sampleData" type="com.reactivestudio.navigationcontroller.data.SampleData"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sample_list_root"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.sampledetails.SampleDetailsFragment"
+            android:padding="16dp">
+
+        <TextView
+                style="@style/TextAppearance.AppCompat.Display2"
+                android:id="@+id/sampleTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{sampleData.title}"
+                tools:text="Sample Headline 1"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:id="@+id/sampleBody"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@{sampleData.body}"
+                tools:text="Sample Body 1"
+                app:layout_constraintTop_toBottomOf="@+id/sampleTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="16dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
